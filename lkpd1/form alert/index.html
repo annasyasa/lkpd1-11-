@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form alert!!!!</title>
+    <style>
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="citcit">
+        <label for="name">Nama kamu:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="age">Umur kamu :</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="gender">Kamu ce/co</label>
+        <select name="gender" id="gender">
+            <option value="cowo">cowo</option>
+            <option value="cewe">cewe</option>
+        </select><br><br>
+        <input type="submit" value="Submit" onclick="myStopFunction(); return false;">
+    </form>
+
+    <div id="result"></div>
+    <script>
+        const myTimeout = setTimeout(myGreeting, 10000);
+        function myGreeting() {
+            alert("OH NOOO WAKTUNYA HABISSS");
+        }
+        function myStopFunction() {
+
+            clearTimeout(myTimeout);
+            const form = document.getElementById('citcit');
+
+            const formData = {
+                name: form.elements['name'].value,
+                age: form.elements['age'].value,
+                gender: form.elements['gender'].value
+            };
+            document.getElementById('result').innerHTML = `
+                Namaku: ${formData.name} <br>
+                Umurku: ${formData.age} <br>
+                Aku: ${formData.gender}
+            `;
+        }
+    </script>
+</body>
+
+</html>

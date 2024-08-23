@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../sumbangan"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sumbangan"
+	}
+}
